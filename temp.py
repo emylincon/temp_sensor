@@ -1,3 +1,5 @@
+# This is a property of London South Bank University developed by EMEKA UGWUANYI
+
 import os
 import glob
 import time
