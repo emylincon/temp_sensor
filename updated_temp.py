@@ -63,7 +63,7 @@ def plot_normal_graph():
 
     ax1.set_ylabel('Temperature')
     ax1.set_xlabel('Time (seconds)')
-    #ax1.fill_between(x, calculate_mov_avg(cel_x), 0, alpha=0.5, color='m')
+    ax1.fill_between(x, calculate_mov_avg(cel_x), 0, alpha=0.5, color='m')
     ax1.legend()
     ax1.set_title('Temperature in Celsius')
     plt.subplot(ax1)
