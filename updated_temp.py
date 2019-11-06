@@ -63,7 +63,7 @@ def plot_normal_graph():
 
     ax1.set_ylabel('Temperature')
     ax1.set_xlabel('Time (seconds)')
-    ax1.fill_between(x, calculate_mov_avg(cel_x), 0, alpha=0.5, color='m')
+    #ax1.fill_between(x, calculate_mov_avg(cel_x), 0, alpha=0.5, color='m')
     ax1.legend()
     ax1.set_title('Temperature in Celsius')
     plt.subplot(ax1)
@@ -75,7 +75,7 @@ def plot_moving_graph():
     x = list(range(len(fer_x)))
     ax2.grid(True)
     ax2.plot(fer_x, 'g--^', linewidth=2, label='Temp in F')
-    ax2.fill_between(x, fer_x, 0, alpha=0.5, color='g')
+    #ax2.fill_between(x, fer_x, 0, alpha=0.5, color='g')
     #ax2.plot(calculate_mov_avg(fer_x), linewidth=5, label='Moving Temp')
 
     # ax2.set_ylabel('Temperature')
