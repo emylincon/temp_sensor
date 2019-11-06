@@ -44,10 +44,10 @@ def read_temp():
 
 
 def plot_normal_graph():
-    x = list(range(len(calculate_mov_avg(cel_x))))
+    #x = list(range(len(calculate_mov_avg(cel_x))))
     ax1.grid(True)
-    # ax1.plot(x, cel_x, linewidth=2, label='Temp C')
-    ax1.plot(x, calculate_mov_avg(cel_x), 'm--*', linewidth=2, label='Moving Temp')
+    ax1.plot(cel_x, linewidth=2, label='Temp C')
+    #ax1.plot(x, calculate_mov_avg(cel_x), 'm--*', linewidth=2, label='Moving Temp')
 
     ax1.set_ylabel('Temperature')
     ax1.set_xlabel('Time (seconds)')
@@ -72,9 +72,9 @@ def calculate_mov_avg(a1):
 
 
 def plot_moving_graph():
-    x = list(range(len(fer_x)))
+    #x = list(range(len(fer_x)))
     ax2.grid(True)
-    ax2.plot(x, fer_x, 'g--^', linewidth=2, label='Temp in F')
+    ax2.plot(fer_x, 'g--^', linewidth=2, label='Temp in F')
     #ax2.fill_between(x, fer_x, 0, alpha=0.5, color='g')
     #ax2.plot(calculate_mov_avg(fer_x), linewidth=5, label='Moving Temp')
     ax2.set_title('Temperature in Fahrenheit')
