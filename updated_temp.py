@@ -43,6 +43,18 @@ def read_temp():
         fer_x.append(temp_f)
 
 
+def calculate_mov_avg(a1):
+    ma1 = []  # moving average list
+    avg1 = 0  # moving average point-wise
+    count = 0
+    for i in range(len(a1)):
+        count += 1
+        avg1 = ((count-1)*avg1+a1[i])/count
+        ma1.append(avg1)  # cumulative average formula
+        # μ_n=((n-1) μ_(n-1)  + x_n)/n
+    return ma1
+
+
 def plot_normal_graph():
     #x = list(range(len(calculate_mov_avg(cel_x))))
     ax1.grid(True)
@@ -59,27 +71,16 @@ def plot_normal_graph():
     # plt.show()
 
 
-def calculate_mov_avg(a1):
-    ma1 = []  # moving average list
-    avg1 = 0  # moving average point-wise
-    count = 0
-    for i in range(len(a1)):
-        count += 1
-        avg1 = ((count-1)*avg1+a1[i])/count
-        ma1.append(avg1)  # cumulative average formula
-        # μ_n=((n-1) μ_(n-1)  + x_n)/n
-    return ma1
-
-
 def plot_moving_graph():
     #x = list(range(len(fer_x)))
     ax2.grid(True)
     ax2.plot(fer_x, 'g--^', linewidth=2, label='Temp in F')
     #ax2.fill_between(x, fer_x, 0, alpha=0.5, color='g')
     #ax2.plot(calculate_mov_avg(fer_x), linewidth=5, label='Moving Temp')
-    ax2.set_title('Temperature in Fahrenheit')
+
     ax2.set_ylabel('Temperature')
     ax2.set_xlabel('Time (seconds)')
+    ax2.set_title('Temperature in Fahrenheit')
     ax2.legend()
     plt.subplot(ax2)
 
@@ -87,12 +88,12 @@ def plot_moving_graph():
 def plot_graphs():
     plot_normal_graph()
     plot_moving_graph()
-    plt.show()
 
 
 while True:
     try:
         read_temp()
+        print(cel_x, fer_x)
         drawnow(plot_graphs)
         time.sleep(1)
     except KeyboardInterrupt:
