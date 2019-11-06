@@ -91,6 +91,10 @@ def plot_graphs():
 
 
 while True:
-    read_temp()
-    drawnow(plot_graphs)
-    time.sleep(1)
+    try:
+        read_temp()
+        drawnow(plot_graphs)
+        time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nProgramme Terminated\n")
+        break
