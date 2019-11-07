@@ -149,6 +149,7 @@ def plot_graphs():
     plot_moving_graph()
     plot_memory()
     plot_cpu()
+    plt.subplots_adjust(wspace=0.3, hspace=0.2)
 
 
 while True:
