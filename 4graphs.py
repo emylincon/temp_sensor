@@ -125,7 +125,7 @@ def plot_cpu():
     ax4.grid(True)
     ax4.plot(list(range(len(calculate_mov_avg(_cpu)))), calculate_mov_avg(_cpu), linewidth=2, label='CPU')
     # ax4.set_title('Moving CPU Utilization')
-    ax4.set_ylabel('Moving CPU')
+    # ax4.set_ylabel('Moving CPU')
     ax4.set_xlabel('Time (seconds)')
     ax4.fill_between(list(range(len(calculate_mov_avg(_cpu)))), calculate_mov_avg(_cpu), 0, alpha=0.2)
     ax4.legend()
