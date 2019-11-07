@@ -11,6 +11,7 @@ import time
 from drawnow import *
 from matplotlib import pyplot as plt
 import psutil
+from pyfiglet import Figlet
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -32,6 +33,10 @@ ax1 = fig.add_subplot(221)
 ax2 = fig.add_subplot(222)
 ax3 = fig.add_subplot(223)
 ax4 = fig.add_subplot(224)
+
+os.system('clear')
+custom_fig = Figlet(font='graffiti')
+print(custom_fig.renderText('Welcome To LSBU'))
 
 
 def read_temp_raw():
@@ -86,7 +91,7 @@ def plot_normal_graph():
 def plot_moving_graph():
     x = list(range(len(fer_x)))
     ax2.grid(True)
-    ax2.plot(fer_x, 'g--^', linewidth=2, label='Temp in F')
+    # ax2.plot(fer_x, 'g--^', linewidth=2, label='Temp in F')
     #ax2.fill_between(x, fer_x, 0, alpha=0.5, color='g')
     ax2.plot(calculate_mov_avg(fer_x), 'g--^', linewidth=2, label='Temp in F')
 
