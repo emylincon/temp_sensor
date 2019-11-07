@@ -1,4 +1,9 @@
-# This is a property of London South Bank University developed by EMEKA UGWUANYI
+"""
+This is a property of London South Bank University developed by EMEKA UGWUANYI
+This plots a line graph of the temperature in celsius and in Fahrenheit. it also plots the memory and cpu utilization
+of the system in the same subplot.
+"""
+
 
 import os
 import glob
