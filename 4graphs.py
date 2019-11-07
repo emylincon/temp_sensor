@@ -37,11 +37,11 @@ ax4 = fig.add_subplot(224)
 os.system('clear')
 custom_fig = Figlet(font='graffiti')
 print(custom_fig.renderText('Welcome To LSBU'))
-print("          /********************************\\")
-print("          *                                *")
-print("          *      Use CTR + C to exit       *")
-print("          *                                *")
-print("          \********************************/\n")
+print("                    /********************************\\")
+print("                    *                                *")
+print("                    *      Use CTR + C to exit       *")
+print("                    *                                *")
+print("                    \********************************/\n")
 
 
 def read_temp_raw():
