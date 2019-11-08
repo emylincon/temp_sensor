@@ -12,6 +12,7 @@ from drawnow import *
 from matplotlib import pyplot as plt
 import psutil
 from pyfiglet import Figlet
+from termcolor import colored, cprint
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -36,12 +37,13 @@ ax4 = fig.add_subplot(224)
 
 os.system('clear')
 custom_fig = Figlet(font='graffiti')
-print(custom_fig.renderText('Welcome To LSBU'))
-print("                    /********************************\\")
-print("                    *                                *")
-print("                    *      Use CTR + C to exit       *")
-print("                    *                                *")
-print("                    \********************************/\n")
+cprint(custom_fig.renderText('welcome to LSBU'), 'yellow')
+#print(custom_fig.renderText('Welcome To LSBU'))
+cprint("                    /********************************\\", 'yellow')
+cprint("                    *                                *", 'yellow')
+cprint("                    *      Use CTR + C to exit       *", 'red')
+cprint("                    *                                *", 'yellow')
+cprint("                    \********************************/\n", 'yellow')
 
 
 def read_temp_raw():
