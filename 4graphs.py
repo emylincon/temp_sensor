@@ -13,6 +13,7 @@ from matplotlib import pyplot as plt
 import psutil
 from pyfiglet import Figlet
 from termcolor import colored, cprint
+import sys
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -34,6 +35,18 @@ ax1 = fig.add_subplot(221)
 ax2 = fig.add_subplot(222)
 ax3 = fig.add_subplot(223)
 ax4 = fig.add_subplot(224)
+
+
+def delay_print(s):
+    for c in s:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(0.25)
+
+
+os.system('clear')
+print('>> starting...')
+delay_print("<========================================================")
 
 os.system('clear')
 custom_fig = Figlet(font='graffiti')
