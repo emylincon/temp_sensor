@@ -57,7 +57,7 @@ cprint("                    *                                *", 'yellow')
 cprint("                    *      Use CTR + C to exit       *", 'red')
 cprint("                    *                                *", 'yellow')
 cprint("                    \********************************/\n", 'yellow')
-time.sleep(2)
+time.sleep(1.9)
 
 
 def read_temp_raw():
