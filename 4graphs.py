@@ -117,7 +117,7 @@ def plot_memory():
     # ax3.set_title('Moving Memory Utilization')
     ax3.set_ylabel('Moving Memory')
     ax3.set_xlabel('Time (seconds)')
-    #ax3.set_title('Memory Utilization')
+    #cleaax3.set_title('Memory Utilization')
     ax3.fill_between(list(range(len(calculate_mov_avg(memory)))), calculate_mov_avg(memory), 0, alpha=0.3, color='m')
     ax3.legend()
     plt.subplot(ax3)
